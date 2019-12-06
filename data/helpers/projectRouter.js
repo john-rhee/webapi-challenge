@@ -33,24 +33,27 @@ router.get('/:id',  (req, res) => {
       });
   });
 });
-////////
-// router.get('/:id',  (req, res) => {
-//    projectData.getProjectActions(req.params.id)
-//   .then(stuff => {
-//       if (stuff) {
-//       res.status(200).json(stuff);
-//       } else {
-//       res.status(404).json({ message: 'ID not found' });
-//       }
-//   })
-//   .catch(error => {
-//       console.log(error);
-//       res.status(500).json({
-//       message: 'Error retrieving the stuff',
-//       });
-//   });
-// });
-////////
+
+router.get('/actions/:id',  (req, res) => {
+
+  projectID = req.params.id
+
+   projectData.getProjectActions(projectID)
+  .then(stuff => {
+      if (stuff) {
+      res.status(200).json(stuff);
+      } else {
+      res.status(404).json({ message: 'ID not found' });
+      }
+  })
+  .catch(error => {
+      console.log(error);
+      res.status(500).json({
+      message: 'Error retrieving the stuff',
+      });
+  });
+});
+
 router.post('/', (req, res) => {
     const updateData = req.body; 
     
