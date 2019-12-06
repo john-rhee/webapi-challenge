@@ -40,13 +40,24 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] Mention two parts of Express that you learned about this week.
 
+1) The purpose of the Express is to make programming more efficient.
+2) It makes it more efficient by separating the codes into components.
+
 - [ ] Describe Middleware?
+
+Middleware functions are functions that have access to the request object, the response object, and the next function in the application’s request-response cycle.
 
 - [ ] Describe a Resource?
 
+A resource is an object with a type, associated data, relationships to other resources, and a set of methods that operate on it.
+
 - [ ] What can the API return to help clients know if a request was successful?
 
+Return status code or error message.
+
 - [ ] How can we partition our application into sub-applications?
+
+Use Express Middleware such as routes
 
 ## Minimum Viable Product
 
